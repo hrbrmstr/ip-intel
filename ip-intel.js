@@ -88,7 +88,11 @@ function getIPIntelligence(info, tab) {
                 chrome.tabs.create({ 
                     url: "http://www.ipvoid.com/scan/" + info.selectionText,
                     windowId: chromeWindow.id,
-                });        
+                });
+                chrome.tabs.create({ 
+                    url: "http://senderscore.org/lookup.php?lookup=" + info.selectionText,
+                    windowId: chromeWindow.id,
+                });
             }
         ); 
     } else {
